@@ -1,1 +1,9 @@
-Hello World!
+<div id="console">
+</div>
+<script>
+    if (window.samsungPay) {
+        document.getElementById("console").innerHTML = "Samsung Pay API is supported!";
+    } else {
+        document.getElementById("console").innerHTML = "Samsung Pay API is *not* supported!";
+    }
+</script>
