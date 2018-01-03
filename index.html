@@ -3,6 +3,15 @@
 <script>
     if (window.samsungPay) {
         document.getElementById("console").innerHTML = "Samsung Pay API is supported!";
+        window.samsungPay.canMakePayment().then( response => {
+            if (response) {
+              document.getElementById("console").innerHTML = "Samsung Pay API canMakePayment returned true.";
+            } else {
+              document.getElementById("console").innerHTML = "Samsung Pay API canMakePayment returned false.";
+            }
+        }).catch(err => {
+          document.getElementById("console").innerHTML = "Samsung Pay API canMakePayment returned error.";
+        });
     } else {
         document.getElementById("console").innerHTML = "Samsung Pay API is *not* supported!";
     }
