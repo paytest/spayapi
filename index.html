@@ -3,7 +3,7 @@
 <script>
     if (window.samsungPay) {
         document.getElementById("console").innerHTML = "Samsung Pay API is supported!";
-        window.samsungPay.canMakePayment().then( response => {
+        window.samsungPay.canMakePayment("https://rwlbuis.github.io", "test").then( response => {
             if (response) {
               document.getElementById("console").innerHTML = "Samsung Pay API canMakePayment returned true.";
             } else {
