@@ -6,7 +6,7 @@
         var optionalData = {
             tranId: '123'
         };
-        window.samsungPay.canMakePayment(optionalData).then( response => {
+        window.samsungPay.canMakePayment().then( response => {
             if (response) {
               document.getElementById("console").innerHTML = "Samsung Pay API canMakePayment returned true.";
             } else {
