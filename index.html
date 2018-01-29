@@ -10,7 +10,7 @@
               document.getElementById("console").innerHTML = "Samsung Pay API canMakePayment returned false.";
             }
         }).catch(err => {
-          document.getElementById("console").innerHTML = "Samsung Pay API canMakePayment returned error.";
+          document.getElementById("console").innerHTML = "Samsung Pay API canMakePayment returned error: " + err;
         });
     } else {
         document.getElementById("console").innerHTML = "Samsung Pay API is *not* supported!";
